@@ -18,7 +18,7 @@ function Home() {
             </Row>
             <Row>
             <Col></Col>
-            <Col xs={5} style={Style.homeBody}>
+            <Col xs={5} style={Style.body}>
                 <p>
                     Welcome to my website! My name is <strong>Elisabeth 
                     Clumpkens</strong> and here you will find different 

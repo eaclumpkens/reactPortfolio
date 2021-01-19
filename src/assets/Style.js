@@ -11,7 +11,7 @@ const header = {
 };
 
 // HOME PAGE
-const homeBody = {
+const body = {
     textAlign: "justify",
     fontSize: "90%",
     margin: "0 auto",
@@ -50,7 +50,7 @@ const icon = {
 
 // EXPORTS  --------------------------------------------------
 exports.header = header;
-exports.homeBody = homeBody;
+exports.body = body;
 exports.logo = logo;
 exports.navLink = navLink;
 exports.footer = footer;

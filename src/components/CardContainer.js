@@ -9,7 +9,7 @@ import {
 function CardContainer() {
     return(
         <CardDeck className="container-fluid">
-            <Cards />
+            <Cards title={"Title"} description={"description"} image={"image"} lang={"HTML"} tech={"tech"} />
         </CardDeck>
     )
 };
