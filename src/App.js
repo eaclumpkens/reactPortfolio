@@ -5,27 +5,37 @@ import {
   Switch
 } from "react-router-dom";
 import Nav from "./components/NavTabs";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from "react-bootstrap"
 
 function App() {
+
+  const containerStyle = {
+    height: "100%",
+    padding: 0
+  }
+
   return (
     <Router>
     <div>
-      <Nav />
-      <Switch>
-          <Route exact path= {["/", "/home"]}>
-            <Home />
-          </Route>
-          <Route exact path= "/portfolio">
-            <Portfolio />
-          </Route>
-          <Route exact path= "/resume" component={ () => {
-            window.location.href = 'https://drive.google.com/file/d/1nFf0nSYoyxPWD3SqKUMFnMGjnz9ly5lt/view?usp=sharing';
-            return null;
-          }}/>
-        </Switch>
+      <Container fluid style={ containerStyle }>
+        <Nav />
+        <Switch>
+            <Route exact path= {["/", "/home"]}>
+              <Home />
+            </Route>
+            <Route exact path= "/portfolio">
+              <Portfolio />
+            </Route>
+            <Route exact path= "/resume" component={ () => {
+              window.location.href = 'https://drive.google.com/file/d/1nFf0nSYoyxPWD3SqKUMFnMGjnz9ly5lt/view?usp=sharing';
+              return null;
+            }}/>
+          </Switch>
+          <Footer />
+        </Container>
     </div>
     </Router>
   );
