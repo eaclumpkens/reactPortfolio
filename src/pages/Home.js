@@ -4,34 +4,21 @@ import {
     Col,
     Row
 } from "react-bootstrap";
+import Style from "../assets/Style";
 
 function Home() {
-
-    const headerStyle = {
-        fontSize: "300%",
-        textAlign: "center",
-        marginTop: "3%",
-        marginBottom: "1%",
-        fontweight: 600
-    };
-
-    const bodyStyle = {
-        textAlign: "justify",
-        margin: "0 auto",
-        fontWeight: 100
-    }
 
     return(
         <Container>
             <Row><Col/></Row>
             <Row>
-                <Col className="text-center" style={headerStyle}>
-                    <h1>Hello!</h1>
+                <Col>
+                    <h1 style={Style.header}>Hello!</h1>
                 </Col>
             </Row>
             <Row>
             <Col></Col>
-            <Col xs={6} style={bodyStyle}>
+            <Col xs={5} style={Style.homeBody}>
                 <p>
                     Welcome to my website! My name is <strong>Elisabeth 
                     Clumpkens</strong> and here you will find different 

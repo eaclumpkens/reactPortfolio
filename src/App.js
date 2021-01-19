@@ -8,7 +8,7 @@ import Nav from "./components/NavTabs";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
-import { Container } from "react-bootstrap"
+import { Container } from "react-bootstrap";
 
 function App() {
 
