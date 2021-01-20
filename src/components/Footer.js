@@ -8,7 +8,7 @@ import Style from "../assets/Style";
 
 function Footer() {
     return(
-        <Row>
+        <Row style={ Style.footerRow }>
             <Col>
                 <Nav className={"fixed-bottom justify-content-center"} style={ Style.footer }>
                     <Nav.Item>
