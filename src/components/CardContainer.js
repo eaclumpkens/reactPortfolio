@@ -1,15 +1,11 @@
 import React from "react";
-import Cards from "./Card"
-import { 
-    Col,
-    CardDeck,
-    Card
-} from "react-bootstrap";
+import Cards from "./Card";
+import { CardDeck } from "react-bootstrap";
 
 function CardContainer() {
     return(
         <CardDeck className="container-fluid">
-            <Cards title={"Title"} description={"description"} image={"image"} lang={"HTML"} tech={"tech"} />
+            <Cards />
         </CardDeck>
     )
 };
