@@ -1,3 +1,9 @@
+// ANIMATION 
+
+const animation = {
+    animationDuration: "2.5s"
+};
+
 // PAGES -----------------------------------------------------
 const header = {
     fontFamily: "Montserrat",
@@ -18,7 +24,8 @@ const body = {
 
 // PORTFOLIO PAGE
 const cardContainer = {
-    marginTop: "0.5rem"
+    width: "22rem",
+    margin: "0.5rem -0.5rem"
 };
 
 const cardHeader = {
@@ -30,15 +37,14 @@ const cardHeader = {
 
 const cardImage = {
     objectFit: "cover",
-    height: "10rem"
+    height: "12rem"
 };
 
 const cardBody = {
     fontSize: "80%",
     fontWeight: 200,
     textAlign: "justify",
-    height: "8rem",
-    width: "15rem",
+    height: "6rem",
     overflow: "scroll"
 };
 
@@ -73,6 +79,7 @@ const icon = {
 
 
 // EXPORTS  --------------------------------------------------
+exports.animation = animation;
 exports.header = header;
 exports.body = body;
 

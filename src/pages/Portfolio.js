@@ -10,7 +10,7 @@ import Style from "../assets/Style";
 function Home() {
 
     return(
-        <Container>
+        <Container style={Style.animation} className="container-fluid animate__animated animate__fadeIn">
             <Row><Col/></Row>
             <Row>
                 <Col className="text-center">

@@ -2,7 +2,7 @@ import React from "react";
 import { 
     Card,
     Button,
-    Col 
+    Col
 } from "react-bootstrap";
 import Style from "../assets/Style";
 
@@ -35,3 +35,4 @@ function Cards() {
 };
 
 export default Cards;
+
