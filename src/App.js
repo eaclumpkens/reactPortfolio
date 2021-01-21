@@ -22,7 +22,7 @@ function App() {
             <Route exact path= {[`${process.env.PUBLIC_URL}/`, `${process.env.PUBLIC_URL}/home`]}>
               <Home />
             </Route>
-            <Route exact path= {`${process.env.PUBLIC_URL}/portfolio`}>
+            <Route exact path= {[`${process.env.PUBLIC_URL}/portfolio`, '*']}>
               <Portfolio />
             </Route>
             <Route exact path= {`${process.env.PUBLIC_URL}/resume`} component={ () => {
