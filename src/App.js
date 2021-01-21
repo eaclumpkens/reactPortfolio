@@ -14,7 +14,7 @@ import Style from "../src/assets/Style";
 function App() {
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
     <div>
       <Container fluid style={ Style.appContainer }>
         <Nav />
