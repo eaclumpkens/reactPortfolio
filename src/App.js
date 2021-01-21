@@ -19,13 +19,13 @@ function App() {
       <Container fluid style={ Style.appContainer }>
         <Nav />
         <Switch>
-            <Route exact path= {["/", "/home"]}>
+            <Route exact path= {[`${process.env.PUBLIC_URL}/`, `${process.env.PUBLIC_URL}/home`]}>
               <Home />
             </Route>
-            <Route exact path= "/portfolio">
+            <Route exact path= {`${process.env.PUBLIC_URL}/portfolio`}>
               <Portfolio />
             </Route>
-            <Route exact path= "/resume" component={ () => {
+            <Route exact path= {`${process.env.PUBLIC_URL}/resume`} component={ () => {
               window.location.href = 'https://drive.google.com/file/d/1nFf0nSYoyxPWD3SqKUMFnMGjnz9ly5lt/view?usp=sharing';
               return null;
             }}/>
