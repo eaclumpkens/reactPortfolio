@@ -31,12 +31,12 @@ function NavTabs() {
             className="ml-auto"
           >
             <Nav.Item>
-              <Nav.Link style={Style.navLink} eventKey="home" href="/home">
+              <Nav.Link style={Style.navLink} eventKey="home" href={`${process.env.PUBLIC_URL}/`}>
                 Home
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link style={Style.navLink} eventKey="portfolio" href="/portfolio">
+              <Nav.Link style={Style.navLink} eventKey="portfolio" href={`${process.env.PUBLIC_URL}/portfolio`}>
                 Portfolio
               </Nav.Link>
             </Nav.Item>
