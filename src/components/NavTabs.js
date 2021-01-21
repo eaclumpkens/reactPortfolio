@@ -14,7 +14,7 @@ function NavTabs() {
     <Row style={Style.navContainer} >
       <Col>
         <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-        <Navbar.Brand href="/home">
+        <Navbar.Brand href={`${process.env.PUBLIC_URL}/home`}>
           <Image
             src="./assets/bioPic.PNG"
             width="110"
