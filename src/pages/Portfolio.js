@@ -7,7 +7,7 @@ import {
 } from "react-bootstrap";
 import Style from "../assets/Style";
 
-function Home() {
+function Portfolio() {
 
     return(
         <Container style={Style.animation} className="container-fluid animate__animated animate__fadeIn">
@@ -24,4 +24,4 @@ function Home() {
     )
 };
 
-export default Home;
+export default Portfolio;
