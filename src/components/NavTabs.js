@@ -11,9 +11,9 @@ import Style from "../assets/Style"
 function NavTabs() {
 
   return (  
-    <Row>
+    <Row style={Style.navContainer} >
       <Col>
-        <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+        <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
         <Navbar.Brand href="/home">
           <Image
             src="./assets/bioPic.PNG"

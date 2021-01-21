@@ -9,18 +9,14 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import { Container } from "react-bootstrap";
+import Style from "../src/assets/Style";
 
 function App() {
-
-  const containerStyle = {
-    height: "100%",
-    padding: 0
-  }
 
   return (
     <Router>
     <div>
-      <Container fluid style={ containerStyle }>
+      <Container fluid style={ Style.appContainer }>
         <Nav />
         <Switch>
             <Route exact path= {["/", "/home"]}>

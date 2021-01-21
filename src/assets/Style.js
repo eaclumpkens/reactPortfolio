@@ -1,5 +1,11 @@
-// ANIMATION 
+// APP CONTAINER
 
+const appContainer = {
+    height: "100%",
+    padding: 0
+};
+
+// ANIMATION 
 const animation = {
     animationDuration: "2.5s"
 };
@@ -50,16 +56,23 @@ const cardBody = {
 
 
 // COMPONENTS ------------------------------------------------
-
 // NAV BAR
+const navContainer = {
+    marginBottom: "10rem",
+    "&:hover": {
+        opacity: "0"
+    }
+};
+
+
 const logo = {
     borderRadius: "20%"
 };
 
 const navLink = {
     color: "white",
-    fontWeight: 300,
-    fontSize: "130%",
+    fontWeight: 400,
+    fontSize: "110%",
     letterSpacing: "0.2rem"
 };
 
@@ -79,6 +92,7 @@ const icon = {
 
 
 // EXPORTS  --------------------------------------------------
+exports.appContainer = appContainer;
 exports.animation = animation;
 exports.header = header;
 exports.body = body;
@@ -88,6 +102,7 @@ exports.cardHeader = cardHeader;
 exports.cardImage = cardImage;
 exports.cardBody = cardBody;
 
+exports.navContainer = navContainer;
 exports.logo = logo;
 exports.navLink = navLink;
 
