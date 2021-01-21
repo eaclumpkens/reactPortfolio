@@ -14,18 +14,18 @@ import Style from "../src/assets/Style";
 function App() {
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
     <div>
       <Container fluid style={ Style.appContainer }>
         <Nav />
         <Switch>
-            <Route exact path= {[`${process.env.PUBLIC_URL}/`, `${process.env.PUBLIC_URL}/home`]}>
+            <Route exact path= {[`/`, `/home`]}>
               <Home />
             </Route>
-            <Route exact path= {[`${process.env.PUBLIC_URL}/portfolio`, '*']}>
+            <Route exact path= {[`/portfolio`, '*']}>
               <Portfolio />
             </Route>
-            <Route exact path= {`${process.env.PUBLIC_URL}/resume`} component={ () => {
+            <Route exact path= {`/resume`} component={ () => {
               window.location.href = 'https://drive.google.com/file/d/1nFf0nSYoyxPWD3SqKUMFnMGjnz9ly5lt/view?usp=sharing';
               return null;
             }}/>
