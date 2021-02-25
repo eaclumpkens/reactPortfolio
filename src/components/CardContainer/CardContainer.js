@@ -1,7 +1,7 @@
 import React from "react";
-import Cards from "./Cards";
+import Cards from "../Cards/Cards";
 import { CardDeck } from "react-bootstrap";
-import Style from "../assets/Style";
+import Style from "../../assets/Style";
 
 function CardContainer() {
     return(

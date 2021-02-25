@@ -4,8 +4,8 @@ import {
   Route,
   Switch
 } from "react-router-dom";
-import Nav from "./components/NavTabs";
-import Footer from "./components/Footer";
+import Nav from "./components/NavTabs/NavTabs";
+import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import { Container } from "react-bootstrap";

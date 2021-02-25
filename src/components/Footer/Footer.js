@@ -4,7 +4,7 @@ import {
     Row,
     Col
 } from "react-bootstrap";
-import Style from "../assets/Style";
+import Style from "../../assets/Style";
 
 function Footer() {
     return(

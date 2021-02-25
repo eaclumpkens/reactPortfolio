@@ -4,10 +4,10 @@ import {
     Button,
     Col
 } from "react-bootstrap";
-import Style from "../assets/Style";
+import Style from "../../assets/Style";
 
 function Cards() {
-    const API = require("../utils/Projects.js");
+    const API = require("../../utils/Projects.js");
     const Projects = API.default;
     
     const allCards = Projects.map((e) => {
