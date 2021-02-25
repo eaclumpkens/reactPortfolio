@@ -1,5 +1,13 @@
 const Projects = [
     {
+        title: "Hearth Community",
+        image: "./assets/hearth-demo.gif",
+        url: "https://github.com/eaclumpkens/Hearth-v2",
+        lang: "JavaScript, HTML, CSS",
+        tech: "React, MongoDB/Mongoose, Express, Node.js, React Suite, Animate.css",
+        description: "This was my final group project for the University of Richmond coding bootcamp. We utilized MERN stack to build Hearth: Designed with community in mind, Hearth connects users to their next hobbie more easily than ever."
+    },
+    {
         title: "Book Listings",
         image: "./assets/book-listings.gif",
         url: "https://github.com/eaclumpkens/react-book-listings",
