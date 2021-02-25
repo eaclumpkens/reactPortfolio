@@ -6,12 +6,12 @@ import {
     Navbar,
     Image
 } from "react-bootstrap";
-import Style from "../../assets/Style"
+import "./NavTabs.css";
 
 function NavTabs() {
 
   return (  
-    <Row style={Style.navContainer} >
+    <Row className="nav-container">
       <Col>
         <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
         <Navbar.Brand href={`${process.env.PUBLIC_URL}/home`}>
@@ -19,9 +19,8 @@ function NavTabs() {
             src="./assets/bioPic.PNG"
             width="110"
             height="110"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top logo"
             alt="Cartoon Logo of Elisabeth"
-            style= { Style.logo }
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -31,17 +30,17 @@ function NavTabs() {
             className="ml-auto"
           >
             <Nav.Item>
-              <Nav.Link style={Style.navLink} eventKey="home" href={`${process.env.PUBLIC_URL}/`}>
+              <Nav.Link id="nav-link" eventKey="home" href={`${process.env.PUBLIC_URL}/`}>
                 Home
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link style={Style.navLink} eventKey="portfolio" href={`${process.env.PUBLIC_URL}/portfolio`}>
+              <Nav.Link id="nav-link" eventKey="portfolio" href={`${process.env.PUBLIC_URL}/portfolio`}>
                 Portfolio
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link style={Style.navLink} target="_blank" eventKey="resume" href="https://drive.google.com/file/d/1nFf0nSYoyxPWD3SqKUMFnMGjnz9ly5lt/view?usp=sharing">
+              <Nav.Link id="nav-link" target="_blank" eventKey="resume" href="https://drive.google.com/file/d/1nFf0nSYoyxPWD3SqKUMFnMGjnz9ly5lt/view?usp=sharing">
                 Resume
               </Nav.Link>
             </Nav.Item>

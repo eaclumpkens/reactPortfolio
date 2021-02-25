@@ -4,7 +4,7 @@ import {
     Button,
     Col
 } from "react-bootstrap";
-import Style from "../../assets/Style";
+import "./Cards.css"
 
 function Cards() {
     const API = require("../../utils/Projects.js");
@@ -13,17 +13,17 @@ function Cards() {
     const allCards = Projects.map((e) => {
         return(
             <Col>
-                <Card style={Style.cardContainer} border="secondary">
-                    <Card.Img style={Style.cardImage} variant="top" src={e.image}/>
+                <Card className="card-container" border="secondary">
+                    <Card.Img className="card-image" variant="top" src={e.image}/>
                     <Card.Body>
-                    <Button style={Style.cardHeader} variant="outline-dark" href={e.url} target= {"_blank"}>{e.title}</Button>
-                    <Card.Text style= {Style.cardBody}>
-                        <strong>Language(s):</strong> {e.lang}
-                        <br/>
-                        <strong>Tech:</strong> {e.tech}
-                        <hr/>
-                        {e.description}
-                    </Card.Text>
+                        <Button className="card-header" variant="outline-dark" href={e.url} target= {"_blank"}>{e.title}</Button>
+                        <Card.Text className="card-body">
+                            <strong>Language(s):</strong> {e.lang}
+                            <br/>
+                            <strong>Tech:</strong> {e.tech}
+                            <hr/>
+                            {e.description}
+                        </Card.Text>
                     </Card.Body>
                 </Card>
             </Col>

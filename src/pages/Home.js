@@ -5,6 +5,7 @@ import {
     Row
 } from "react-bootstrap";
 import Style from "../assets/Style";
+import "./Pages.css";
 import DocumentMeta from "react-document-meta";
 
 function Home() {
@@ -16,16 +17,16 @@ function Home() {
     return(
         <div>
             <DocumentMeta {...meta} />
-            <Container style={Style.animation} className="animate__animated animate__fadeIn">
+            <Container className="aniamtion animate__animated animate__fadeIn">
                 <Row><Col/></Row>
                 <Row>
                     <Col>
-                        <h1 style={Style.header}>Hello!</h1>
+                        <h1 className="header">Hello!</h1>
                     </Col>
                 </Row>
                 <Row>
                 <Col></Col>
-                <Col xs={5} style={Style.body}>
+                <Col xs={5} className="body">
                     <p>
                         Welcome to my website! My name is <strong>Elisabeth 
                         Clumpkens</strong> and here you will find different 

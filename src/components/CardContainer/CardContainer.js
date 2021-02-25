@@ -1,11 +1,11 @@
 import React from "react";
 import Cards from "../Cards/Cards";
 import { CardDeck } from "react-bootstrap";
-import Style from "../../assets/Style";
+import "./CardContainer.css"
 
 function CardContainer() {
     return(
-        <CardDeck style={Style.cardDeck}>
+        <CardDeck>
             <Cards />
         </CardDeck>
     )
