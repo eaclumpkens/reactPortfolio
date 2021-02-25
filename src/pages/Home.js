@@ -4,7 +4,6 @@ import {
     Col,
     Row
 } from "react-bootstrap";
-import Style from "../assets/Style";
 import "./Pages.css";
 import DocumentMeta from "react-document-meta";
 
