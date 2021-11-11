@@ -53,7 +53,7 @@ const Projects = [
         url: "https://github.com/eaclumpkens/restaurantApp",
         lang: "JavaScript, HTML, CSS",
         tech: "Express, Handlebars, mySQL, Node",
-        description: " Burger logger with MySQL, Node, Express, Handlebars, and ORM following MVC design pattern; Node and MYSQL to query and route data; Handlebars to generate HTML. This app was purely to test my experience with Handlebars, ORM, and MVC."
+        description: "Burger logger with MySQL, Node, Express, Handlebars, and ORM following MVC design pattern; Node and MYSQL to query and route data; Handlebars to generate HTML. This app was purely to test my experience with Handlebars, ORM, and MVC."
     },
     {
         title: "Employee Tracker",

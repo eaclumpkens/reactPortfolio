@@ -23,7 +23,7 @@ function Portfolio() {
                         <h1 className="header">Portfolio</h1>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="container">
                     <CardContainer />
                 </Row>
             </Container>

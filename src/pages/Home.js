@@ -4,14 +4,11 @@ import {
     Col,
     Row
 } from "react-bootstrap";
-import "./Pages.css";
+import "./style/Pages.css";
 import DocumentMeta from "react-document-meta";
 
-function Home() {
-
-    const meta = {
-        title: 'EC | Home'
-    }
+export default function Home() {
+    const meta = { title: 'EC | Home' };
 
     return(
         <div>
@@ -51,4 +48,3 @@ function Home() {
     )
 };
 
-export default Home;

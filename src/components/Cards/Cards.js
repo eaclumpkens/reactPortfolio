@@ -4,7 +4,7 @@ import {
     Button,
     Col
 } from "react-bootstrap";
-import "./Cards.css"
+import "./Cards.css";
 
 function Cards() {
     const API = require("../../utils/Projects.js");
@@ -15,8 +15,8 @@ function Cards() {
             <Col>
                 <Card className="card-container" border="secondary">
                     <Card.Img className="card-image" variant="top" src={e.image}/>
+                    <h4 className="card-header" ><a href={e.url} target= {"_blank"}>{e.title}</a></h4>
                     <Card.Body>
-                        <Button className="card-header" variant="outline-dark" href={e.url} target= {"_blank"}>{e.title}</Button>
                         <Card.Text className="card-body">
                             <strong>Language(s):</strong> {e.lang}
                             <br/>
