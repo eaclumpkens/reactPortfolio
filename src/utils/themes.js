@@ -3,43 +3,28 @@ import { createTheme } from '@mui/material/styles';
 var dayTheme = createTheme({
     palette: {
         primary: { 
-            light: '#FFD29D',
+            light: '#e3f2fd',
             main: '#FFB563',
             dark: '#F85E00'
         },
         secondary: { 
             main: '#A41623',
         },
-        // error: { 
-        //     light: '',
-        //     main: '',
-        //     dark: ''
-        // },
-        // warning: { 
-        //     light: '',
-        //     main: '',
-        //     dark: ''
-        // },
-        // info: { 
-        //     light: '',
-        //     main: '',
-        //     dark: ''
-        // },
-        // success: { 
-        //     light: '',
-        //     main: '',
-        //     dark: ''
-        // }
-
     },
     typography: {
         title: { 
             color: '#A41623', 
-            fontSize:  '4rem',
-            textAlign: 'center',
-            letterSpacing: '0.4rem'
+            marginBottom: '1rem !important',
+            fontSize:  '4rem !important',
+            textAlign: 'center !important',
+            letterSpacing: '0.5rem !important',
+            fontWeight: '200 !important'
         },
-        body: { color: `#373F51` },
+        body: { 
+            color: `#373F51`,
+            maxWidth: '30rem',
+            minWidth: '15rem'
+        },
         subtitle: {
             color: '#A41623',
             fontSize: '1.2rem'

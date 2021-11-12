@@ -6,7 +6,7 @@ import { Grid } from "@mui/material";
 import Menu from "../../components/Menu/Menu";
 import Intro from './Intro';
 import Portfolio from './Portfolio';
-
+import Contact from './Contact';
 
 export default function Home() {
   const style = useStyles();
@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <Grid container spacing={2} className={style.mainContainer}>
+      <Grid container fluid spacing={2} className={style.mainContainer}>
         <DocumentMeta {...meta }/>
         <Grid item xs={12}>
           <Menu onClick={ jumpComponents } />
@@ -29,10 +29,17 @@ export default function Home() {
         <div ref={myRef[0]}>
           <Intro/>
         </div>
+        <div className={style.divider}></div>
 
         <div ref={myRef[1]}>
           <Portfolio/>
         </div>
+        <div className={style.divider}></div>
+
+        <div ref={myRef[2]}>
+          <Contact/>
+        </div>
+        <div className={style.divider}></div>
 
       </Grid>
     </>
@@ -42,7 +49,15 @@ export default function Home() {
 const useStyles = makeStyles(theme => ({
   mainContainer: {
     background: theme.palette.primary.light,
-    margin: '5rem 0rem'
+    display: 'inline-block',
+    justifyContent: 'center',
+    padding: '3rem 2.5rem',
+  },
+  divider:{
+    height: '40rem',
+    [theme.breakpoints.down('sm')]: {
+      height: '20rem'
+    }
   }
 }));
 

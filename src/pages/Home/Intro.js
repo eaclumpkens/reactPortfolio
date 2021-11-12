@@ -19,8 +19,8 @@ export default function Intro(props) {
     ];
 
     return(
-        <Grid item xs={5} className={ style.container }>
-            <Typography ref={props.ref} className={style.title}>Hello!</Typography>
+        <Grid item xs={12} className={ style.container }>
+            <Typography ref={props.ref} className={style.title}>hello!</Typography>
             { paragraphs.map(par => ( <Typography className={ style.body } variant="body1">{ par }</Typography> )) }   
         </Grid>
     )
@@ -31,12 +31,9 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'justify',
         margin: '0 auto',
     },
-    title: {
-        ...theme.typography.title,
-        marginBottom: theme.spacing(1)
-    },
+    title: theme.typography.title,
     body: {
         ...theme.typography.body,
-        margin: theme.spacing(2)
+        padding: theme.spacing(1),
     },
 }));

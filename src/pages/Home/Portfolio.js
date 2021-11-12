@@ -8,15 +8,18 @@ export default function Portfolio(props) {
     const style = useStyles()
 
     return(
-        <Grid item xs={10} className={style.container}>
-            <Typography ref={props.ref} className={style.title}>Portfolio</Typography>
+        <Grid item xs={12} className={style.container}>
+            <Typography ref={props.ref} className={style.title}>portfolio</Typography>
               
              <Grid container spacing={1} className={style.container}>
                 { Projects.map(proj => (
-                    <Card sx={{ maxWidth: 325, maxHeight: 400 }} className={ style.cardContainer }>
+                    <Card 
+                        sx={{ maxWidth: 300, maxHeight: 350 }} 
+                        className={ style.cardContainer }
+                    >
                         <CardMedia
                             component='img'
-                            height= '160'
+                            height= '180'
                             image={ proj.image }
                             alt={ `preview of ${proj.title}` }
                         />
@@ -53,13 +56,10 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'justify',
         margin: '0 auto',
     },
-    title: {
-        ...theme.typography.title,
-        marginBottom: theme.spacing(1)
-    },
+    title: theme.typography.title,
     cardContainer: {
         margin: '0.3rem',
-        overflow: 'scroll'
+        overflow: 'scroll',
     },
     subtitle: {
         ...theme.typography.subtitle,

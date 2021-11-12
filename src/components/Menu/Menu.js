@@ -3,12 +3,14 @@ import { makeStyles } from '@mui/styles'
 import { Box, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 
 import { AppContext } from '../../utils/AppContext';
+import { dayTheme, nightTheme } from '../../utils/themes';
+
 import MenuDrawer from './MenuDrawer';
 import MenuItems from './MenuItems';
 import ThemeSwitch from './ThemeSwitch';
 
 export default function Menu(props) {
-  const { theme, setTheme } = useContext(AppContext);
+  const { setTheme } = useContext(AppContext);
   const { onClick } = props;
   const style = useStyles();
 
@@ -19,7 +21,7 @@ export default function Menu(props) {
     setDrawer(open);
   };
 
-  const handleTheme = check => { check ? setTheme('night') : setTheme('day') };
+  const handleTheme = check => { check ? setTheme(nightTheme) : setTheme(dayTheme) };
 
   return (
     <div>

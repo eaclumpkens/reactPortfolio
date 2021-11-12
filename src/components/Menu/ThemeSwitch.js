@@ -3,6 +3,8 @@ import clsx from "clsx";
 import { styled } from "@mui/system";
 import { useSwitch } from "@mui/core/SwitchUnstyled";
 
+import { dayTheme, nightTheme } from '../../utils/themes';
+
 export default function ThemeSwitch(props) {
   const { getInputProps, checked, disabled, focusVisible } = useSwitch(props);
   const stateClasses = { checked, disabled, focusVisible };
