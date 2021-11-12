@@ -1,4 +1,4 @@
-import  React, { useState, useEffect  } from "react";
+import  React from "react";
 import { makeStyles } from '@mui/styles'
 import { Drawer, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -7,8 +7,6 @@ import "./Menu.css";
 
 export default function MenuDrawer(props) {
   const style = useStyles();
-
-  console.log('props', props)
 
   return (
     <div>

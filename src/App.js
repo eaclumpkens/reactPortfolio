@@ -1,27 +1,28 @@
-import React from "react";
-import {  BrowserRouter as Router } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import React, { useContext, useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ThemeProvider } from '@mui/material/styles';
 
-import Routes from './Routes.js';
-import Menu from "./components/Menu/Menu";
-import Footer from "./components/Footer/Footer";
-import "./App.css";
+import { AppContext } from './utils/AppContext';
+import { dayTheme, nightTheme } from './utils/themes.js';
 
-function App() {
+import Home from "./pages/Home/Home";
+
+export default function App() {
+  const ctx = useContext(AppContext);
+  const [ theme, setTheme ] = useState('day')
 
   return (
-    <Router>
-      <div>
-        <Container className="app-container" fluid>
-          <Menu/>
-          <Routes/>
-          <Footer/>
-        </Container>
-      </div>
-    </Router>
+    <AppContext.Provider value={{ theme, setTheme }}>
+      <ThemeProvider theme={ theme === 'day' ? dayTheme : nightTheme }>
+        <Router>
+          <Switch>
+            <Route exact path={[`*`, `/`]}>
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
+      </ThemeProvider>
+    </AppContext.Provider>
   );
-}
-
-export default App;
-
+};
 

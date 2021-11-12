@@ -2,17 +2,17 @@ const { REACT_APP_RESUME_URL } = process.env;
 
 module.exports = [
     {
-        ref: '#home',
-        title: 'Home',
+        ref: 'intro',
+        title: 'Intro',
         icon: ''
     },
     {
-        ref: '#portfolio',
+        ref: 'portfolio',
         title: 'Portfolio',
         icon: ''
     },
     {
-        ref: '#contactme',
+        ref: 'contact',
         title: 'Contact Me',
         icon: ''
     },

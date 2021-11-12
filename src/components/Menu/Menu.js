@@ -1,20 +1,25 @@
-import  React, { useState, useEffect  } from "react";
+import  React, { useState, useContext } from "react";
 import { makeStyles } from '@mui/styles'
-import { Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Box, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 
+import { AppContext } from '../../utils/AppContext';
 import MenuDrawer from './MenuDrawer';
 import MenuItems from './MenuItems';
-import "./Menu.css";
+import ThemeSwitch from './ThemeSwitch';
 
 export default function Menu(props) {
-  const [ drawer, setDrawer ] = useState(false);
+  const { theme, setTheme } = useContext(AppContext);
+  const { onClick } = props;
   const style = useStyles();
+
+  const [ drawer, setDrawer ] = useState(false);
 
   const toggleDrawer = open => event => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) return;
     setDrawer(open);
   };
+
+  const handleTheme = check => { check ? setTheme('night') : setTheme('day') };
 
   return (
     <div>
@@ -23,6 +28,10 @@ export default function Menu(props) {
         onClick={ toggleDrawer(true) } 
         onClose={ toggleDrawer(false) }
       >
+        <ThemeSwitch 
+          // checked={theme!=='day'}
+          onChange={ event => handleTheme(event.target.checked) }
+        />
         <Box
           sx={{ }}
           role="presentation"
@@ -31,10 +40,10 @@ export default function Menu(props) {
         >
           <List>
             { MenuItems.map(item => (
-              <ListItem button key={item.title}>
+              <ListItemButton onClick={ () => onClick(item.ref) } key={item.title}>
                 <ListItemIcon>{ item.icon }</ListItemIcon>
                 <ListItemText primary={item.title} />
-              </ListItem>
+              </ListItemButton>
             )) }
           </List>
         </Box>
