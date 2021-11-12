@@ -15,7 +15,7 @@ var dayTheme = createTheme({
         title: { 
             color: '#A41623', 
             marginBottom: '1rem !important',
-            fontSize:  '4rem !important',
+            fontSize:  '3.5rem !important',
             textAlign: 'center !important',
             letterSpacing: '0.5rem !important',
             fontWeight: '200 !important'

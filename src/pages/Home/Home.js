@@ -1,64 +1,63 @@
 import React, { useRef } from "react";
 import DocumentMeta from "react-document-meta";
-import { makeStyles } from '@mui/styles'
+import { makeStyles } from "@mui/styles";
 import { Grid } from "@mui/material";
 
 import Menu from "../../components/Menu/Menu";
-import Intro from './Intro';
-import Portfolio from './Portfolio';
-import Contact from './Contact';
+import Intro from "./Intro";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 
 export default function Home() {
   const style = useStyles();
-  const myRef = useRef([ 'intro', 'portfolio', 'contact'])
+  const myRef = useRef(["intro", "portfolio", "contact"]);
   const meta = { title: "EC | Home" };
 
-  const jumpComponents = ref => {
+  const jumpComponents = (ref) => {
     myRef.current = ref;
-    window.scrollTo(0, myRef.current.offsetTop)
+    window.scrollTo(0, myRef.current.offsetTop);
   };
 
   return (
     <>
       <Grid container fluid spacing={2} className={style.mainContainer}>
-        <DocumentMeta {...meta }/>
+        <DocumentMeta {...meta} />
         <Grid item xs={12}>
-          <Menu onClick={ jumpComponents } />
+          <Menu onClick={jumpComponents} />
         </Grid>
 
         <div ref={myRef[0]}>
-          <Intro/>
+          <Intro />
         </div>
         <div className={style.divider}></div>
 
         <div ref={myRef[1]}>
-          <Portfolio/>
+          <Portfolio />
         </div>
         <div className={style.divider}></div>
 
         <div ref={myRef[2]}>
-          <Contact/>
+          <Contact />
         </div>
         <div className={style.divider}></div>
-
       </Grid>
     </>
   );
-};
+}
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: theme.palette.primary.light,
-    display: 'inline-block',
-    justifyContent: 'center',
-    padding: '3rem 2.5rem',
+    display: "inline-block",
+    justifyContent: "center",
+    padding: "3rem 2.5rem",
   },
-  divider:{
-    height: '40rem',
-    [theme.breakpoints.down('sm')]: {
-      height: '20rem'
-    }
-  }
+  divider: {
+    height: "40rem",
+    [theme.breakpoints.down("sm")]: {
+      height: "20rem",
+    },
+  },
 }));
 
 // return (
