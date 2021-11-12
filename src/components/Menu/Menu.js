@@ -8,13 +8,18 @@ import { dayTheme, nightTheme } from '../../utils/themes';
 import MenuDrawer from './MenuDrawer';
 import MenuItems from './MenuItems';
 import ThemeSwitch from './ThemeSwitch';
+import { useEffect } from "react";
 
 export default function Menu(props) {
   const { setTheme } = useContext(AppContext);
-  const { onClick } = props;
   const style = useStyles();
 
   const [ drawer, setDrawer ] = useState(false);
+  const [ anchorTarget, setAnchorTarget ] = useState(null);
+
+  useEffect(() => {
+    if (anchorTarget) anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start', alignToTop: false });
+  }, [anchorTarget])
 
   const toggleDrawer = open => event => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) return;
@@ -22,6 +27,11 @@ export default function Menu(props) {
   };
 
   const handleTheme = check => { check ? setTheme(nightTheme) : setTheme(dayTheme) };
+
+  const handleClick = async (event, target) => {
+    event.preventDefault();
+    setAnchorTarget(document.getElementById(target));
+  };
 
   return (
     <div>
@@ -42,7 +52,11 @@ export default function Menu(props) {
         >
           <List>
             { MenuItems.map(item => (
-              <ListItemButton onClick={ () => onClick(item.ref) } key={item.title}>
+              <ListItemButton 
+                href={item.href}
+                onClick={event => handleClick(event, item.href) } 
+                key={item.title}
+              >
                 <ListItemIcon>{ item.icon }</ListItemIcon>
                 <ListItemText primary={item.title} />
               </ListItemButton>

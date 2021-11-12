@@ -27,11 +27,13 @@ var dayTheme = createTheme({
         },
         subtitle: {
             color: '#A41623',
-            fontSize: '1.2rem'
+            fontWeight: '600 !important',
+            fontSize: '1.2rem !important',
+            letterSpacing: '0.4rem !important'
         }, 
         subbody: {
             fontSize: '0.8rem',
-            textAlign: 'justify'
+            textAlign: 'justify',
         },
         subinfo: {
             color: '#A41623',

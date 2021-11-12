@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import DocumentMeta from "react-document-meta";
 import { makeStyles } from "@mui/styles";
 import { Grid } from "@mui/material";
@@ -10,35 +10,23 @@ import Contact from "./Contact";
 
 export default function Home() {
   const style = useStyles();
-  const myRef = useRef(["intro", "portfolio", "contact"]);
-  const meta = { title: "EC | Home" };
-
-  const jumpComponents = (ref) => {
-    myRef.current = ref;
-    window.scrollTo(0, myRef.current.offsetTop);
-  };
+  const meta = { title: "ec | hello" };
 
   return (
     <>
       <Grid container fluid spacing={2} className={style.mainContainer}>
         <DocumentMeta {...meta} />
-        <Grid item xs={12}>
-          <Menu onClick={jumpComponents} />
+        <Grid item xs={12} className={{root: { position: "absolute" }}}>
+          <Menu/>
         </Grid>
 
-        <div ref={myRef[0]}>
-          <Intro />
-        </div>
+        <Intro/>
         <div className={style.divider}></div>
 
-        <div ref={myRef[1]}>
-          <Portfolio />
-        </div>
+        <Portfolio/>
         <div className={style.divider}></div>
 
-        <div ref={myRef[2]}>
-          <Contact />
-        </div>
+        <Contact/>
         <div className={style.divider}></div>
       </Grid>
     </>

@@ -1,15 +1,27 @@
 import  React from "react";
-import { makeStyles } from '@mui/styles'
-import { Drawer, Button } from '@mui/material';
+import { Drawer, Box, Fab } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function MenuDrawer(props) {
-  const style = useStyles();
 
   return (
-    <div>
+    <div style={{ position: "relative", top: 0,}}>
       <React.Fragment key='right'>
-        <Button onClick={props.onClick}>{<MenuIcon/>}</Button>
+        <Box>
+          <Fab 
+            color='primary'
+            size='large'
+            style={{ 
+              margin: '1rem',
+              top: 0,
+              left: 0,
+              position: 'fixed',
+            }}
+            onClick={props.onClick}
+          >
+            <MenuIcon/>
+          </Fab>
+        </Box>
         <Drawer
           anchor={'right'}
           open={props.open}
@@ -20,19 +32,4 @@ export default function MenuDrawer(props) {
       </React.Fragment>
     </div>
   );
-}
-
-const useStyles = makeStyles(theme => ({
-  navContainer: {
-    marginBottom: '10rem'
-  },
-  logo: {
-    borderRadius: '20%'
-  }, 
-  navLink: {
-    color: 'white',
-    fontWeight: 400,
-    fontSize: '110%',
-    letterSpacing: '0.2rem'
-  }
-}));
+};

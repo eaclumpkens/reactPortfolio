@@ -2,22 +2,22 @@ const { REACT_APP_RESUME_URL } = process.env;
 
 module.exports = [
     {
-        ref: 'intro',
-        title: 'Intro',
+        href: '#intro',
+        title: 'Hello',
         icon: ''
     },
     {
-        ref: 'portfolio',
+        href: '#portfolio',
         title: 'Portfolio',
         icon: ''
     },
     {
-        ref: 'contact',
+        href: '#contact',
         title: 'Contact Me',
         icon: ''
     },
     {   
-        ref: REACT_APP_RESUME_URL,
+        href: REACT_APP_RESUME_URL,
         title: 'Resume',
         icon: ''
     },
