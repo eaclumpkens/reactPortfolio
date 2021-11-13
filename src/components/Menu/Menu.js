@@ -1,8 +1,7 @@
 import  React, { useState, useContext } from "react";
-import { makeStyles } from '@mui/styles'
-import { Box, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { Box, List, ListItemButton, Typography, ListItemText } from '@mui/material';
 
-import { AppContext } from '../../utils/AppContext';
+import { AppContext } from '../../AppContext';
 import { dayTheme, nightTheme } from '../../utils/themes';
 
 import MenuDrawer from './MenuDrawer';
@@ -12,7 +11,6 @@ import { useEffect } from "react";
 
 export default function Menu(props) {
   const { setTheme } = useContext(AppContext);
-  const style = useStyles();
 
   const [ drawer, setDrawer ] = useState(false);
   const [ anchorTarget, setAnchorTarget ] = useState(null);
@@ -41,11 +39,9 @@ export default function Menu(props) {
         onClose={ toggleDrawer(false) }
       >
         <ThemeSwitch 
-          // checked={theme!=='day'}
           onChange={ event => handleTheme(event.target.checked) }
         />
         <Box
-          sx={{ }}
           role="presentation"
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
@@ -53,12 +49,26 @@ export default function Menu(props) {
           <List>
             { MenuItems.map(item => (
               <ListItemButton 
+                disabled={item.disabled}
                 href={item.href}
-                onClick={event => handleClick(event, item.href) } 
+                onClick={event => {
+                  if (item.title !== 'Resume') handleClick(event, item.href)
+                  else window.open(item.href, '_blank')
+                } } 
                 key={item.title}
               >
-                <ListItemIcon>{ item.icon }</ListItemIcon>
-                <ListItemText primary={item.title} />
+                <ListItemText 
+                  disableTypography
+                  primary={
+                    <Typography 
+                      style={{ 
+                        letterSpacing: '0.4rem', 
+                        fontWeight: 300 
+                    }}> 
+                      {item.title}
+                    </Typography>
+                  } 
+                />
               </ListItemButton>
             )) }
           </List>
@@ -67,18 +77,3 @@ export default function Menu(props) {
     </div>
   );
 }
-
-const useStyles = makeStyles(theme => ({
-  navContainer: {
-    marginBottom: '10rem'
-  },
-  logo: {
-    borderRadius: '20%'
-  }, 
-  navLink: {
-    color: 'white',
-    fontWeight: 400,
-    fontSize: '110%',
-    letterSpacing: '0.2rem'
-  }
-}));

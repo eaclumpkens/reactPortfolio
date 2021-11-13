@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from '@mui/material/styles';
 
-import { AppContext } from './utils/AppContext';
+import { AppContext } from './AppContext';
 import { dayTheme } from './utils/themes.js';
 
 import Home from "./pages/Home/Home";

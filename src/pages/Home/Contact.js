@@ -56,6 +56,9 @@ const useStyles = makeStyles((theme) => ({
     margin: "0.5rem 2rem",
     transform: "scale(1.8)",
     textAlign: "center",
+    '&:hover': {
+        color: theme.palette.primary.main,
+     },
     [theme.breakpoints.down('sm')]: {
         margin: "0.5rem 1.5rem",
     }

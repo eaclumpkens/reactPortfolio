@@ -4,21 +4,22 @@ module.exports = [
     {
         href: '#intro',
         title: 'Hello',
-        icon: ''
     },
     {
         href: '#portfolio',
         title: 'Portfolio',
-        icon: ''
+    },
+    {
+        href: '#aboutme',
+        title: 'About Me',
+        disabled: true
     },
     {
         href: '#contact',
         title: 'Contact Me',
-        icon: ''
     },
     {   
         href: REACT_APP_RESUME_URL,
         title: 'Resume',
-        icon: ''
     },
 ];

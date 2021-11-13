@@ -12,6 +12,7 @@ export default function ThemeSwitch(props) {
     width: 62px;
     height: 34px;
     padding: 7px;
+    margin: 0.5rem;
   `;
 
   const SwitchInput = styled("input")`

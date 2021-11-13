@@ -1,8 +1,10 @@
 import  React from "react";
+import { makeStyles } from '@mui/styles'
 import { Drawer, Box, Fab } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function MenuDrawer(props) {
+  const style = useStyles();
 
   return (
     <div style={{ position: "relative", top: 0,}}>
@@ -26,6 +28,11 @@ export default function MenuDrawer(props) {
           anchor={'right'}
           open={props.open}
           onClose={props.onClose}
+          PaperProps={{ sx: { 
+            backgroundColor: 'primary.main', 
+            color: 'primary.light',
+          }}}
+          classes={{ paper: style.box }}
         >
           { props.children }
         </Drawer>
@@ -33,3 +40,9 @@ export default function MenuDrawer(props) {
     </div>
   );
 };
+
+const useStyles = makeStyles(theme => ({
+  box: {
+    background: theme.palette.primary.dark 
+  }
+}));
