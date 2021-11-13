@@ -11,22 +11,22 @@ export default function Contact(props) {
         <div id="#contact">contact me</div>
       </Typography>
       <Grid container className={style.iconContainer}>
-        <Grid xs={1} className={style.icon}>
+        <Grid className={style.icon}>
           <Link href="https://github.com/eaclumpkens" target="_blank">
             <GitHub fontSize="large" />
           </Link>
         </Grid>
-        <Grid xs={1} className={style.icon}>
+        <Grid className={style.icon}>
           <Link href="https://www.linkedin.com/in/eaclumpkens/" target="_blank">
             <LinkedIn fontSize="large" />
           </Link>
         </Grid>
-        <Grid xs={1} className={style.icon}>
+        <Grid className={style.icon}>
           <Link href="mailto:eaclumpkens@gmail.com" target="_blank">
             <Email fontSize="large" />
           </Link>
         </Grid>
-        <Grid xs={1} className={style.icon}>
+        <Grid className={style.icon}>
           <Link href="tel:+15713779356">
             <Phone fontSize="large"/>
           </Link>
@@ -53,14 +53,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   icon: {
-    margin: "0.5rem 2rem",
+    margin: "0.5rem 5rem",
     transform: "scale(1.8)",
     textAlign: "center",
     '&:hover': {
         color: theme.palette.primary.main,
      },
     [theme.breakpoints.down('sm')]: {
-        margin: "0.5rem 1.5rem",
+        margin: "0.5rem 1.5rem"
     }
   },
 }));

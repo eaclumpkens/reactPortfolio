@@ -38,9 +38,9 @@ export default function Menu(props) {
         onClick={ toggleDrawer(true) } 
         onClose={ toggleDrawer(false) }
       >
-        <ThemeSwitch 
+        {/* <ThemeSwitch 
           onChange={ event => handleTheme(event.target.checked) }
-        />
+        /> */}
         <Box
           role="presentation"
           onClick={toggleDrawer(false)}

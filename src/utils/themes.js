@@ -13,9 +13,9 @@ var dayTheme = createTheme({
             dark: '#3a5a40'
         },
         tertiary: { 
-            light: '#D7474C',
-            main: '#ae2012',
-            dark: '#9b2226'
+            light: '#D2DBD5',
+            main: '#98ADA0',
+            dark: '#779281'
         },
     },
     typography: {
@@ -34,13 +34,13 @@ var dayTheme = createTheme({
         },
         subtitle: {
             color: '#d19c1d',
-            fontWeight: '600 !important',
+            fontWeight: '400 !important',
             fontSize: '1.2rem !important',
             letterSpacing: '0.4rem !important'
         }, 
         subbody: {
             color: '#432A0F',
-            fontSize: '0.75rem !important',
+            fontSize: '0.9rem !important',
             textAlign: 'justify',
         },
         subinfo: {
@@ -76,7 +76,7 @@ var nightTheme = createTheme({
             letterSpacing: '0.4rem !important'
         }, 
         subbody: {
-            fontSize: '0.8rem',
+            fontSize: '1rem',
             textAlign: 'justify',
         },
         subinfo: {

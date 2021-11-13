@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Typography, Avatar } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-import Bio from "../../utils/bio";
+import { bio } from '../../utils/copy';
 
 export default function Intro(props) {
   const style = useStyles();
@@ -12,7 +12,6 @@ export default function Intro(props) {
         <Avatar
           src="./assets/bioPic.PNG"
           variant="rounded"
-          size={style.avatar}
           sx={{
             width: 100,
             height: 100,
@@ -22,8 +21,8 @@ export default function Intro(props) {
         <Typography ref={props.ref} className={style.title}>
           hello!
         </Typography>
-        {Bio.map((p) => (
-          <Typography className={style.body} variant="body1">
+        {bio.map((p, i) => (
+          <Typography key={i} className={style.body} variant="body1">
             {p}
           </Typography>
         ))}
@@ -36,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     textAlign: "justify",
     marginBottom: "3rem !important",
+    marginTop: '5rem !important',
   },
   title: {
     ...theme.typography.title,
