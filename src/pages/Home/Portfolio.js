@@ -12,7 +12,7 @@ import { GitHub, ExitToApp } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
 import Color from "color";
 
-import Projects from "../../utils/projects";
+import { projects } from '../../utils/copy';
 
 export default function Portfolio(props) {
   const style = useStyles();
@@ -23,8 +23,8 @@ export default function Portfolio(props) {
         <div id="#portfolio">portfolio</div>
       </Typography>
       <Grid container spacing={1} className={style.cardWrapper}>
-        {Projects.map((proj) => (
-          <Card className={style.cardContainer}>
+        {projects.map((proj, i) => (
+          <Card key={i} className={style.cardContainer}>
             <CardMedia
               component="img"
               className={style.cardImage}

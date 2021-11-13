@@ -6,13 +6,12 @@ module.exports = [
         title: 'Hello',
     },
     {
-        href: '#portfolio',
-        title: 'Portfolio',
-    },
-    {
         href: '#aboutme',
         title: 'About Me',
-        disabled: true
+    },
+    {
+        href: '#portfolio',
+        title: 'Portfolio',
     },
     {
         href: '#contact',
