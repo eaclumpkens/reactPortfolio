@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.primary.main,
      },
     [theme.breakpoints.down('sm')]: {
-        margin: "0.5rem 1.5rem"
+        margin: "0.5rem 1.2rem"
     }
   },
 }));
