@@ -26,11 +26,6 @@ export default function Contact(props) {
             <Email fontSize="large" />
           </Link>
         </Grid>
-        <Grid className={style.icon}>
-          <Link href="tel:+15713779356">
-            <Phone fontSize="large"/>
-          </Link>
-        </Grid>
       </Grid>
     </Grid>
   );
